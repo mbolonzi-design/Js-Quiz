@@ -44,3 +44,17 @@ const submitBtn = document.getElementById("submit");
 
 let currentQuiz = 0;
 let score = 0;
+
+loadQuiz();
+
+function loadQuiz(){
+    deselectAnswer();
+
+    const currentQuestions = questions[currentQuiz];
+
+    questionEl.innerText = currentQuestions.question;
+    ans01.innerText = currentQuestions.ans1;
+    ans02.innerText = currentQuestions.ans2;
+    ans03.innerText = currentQuestions.ans3;
+    ans04.innerText = currentQuestions.ans4;
+}
