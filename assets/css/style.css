@@ -49,3 +49,6 @@ button{
     width: 100%;
     padding: 10px;
 }
+button:hover{
+    background-color: #000;
+}
