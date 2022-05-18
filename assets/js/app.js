@@ -58,3 +58,41 @@ function loadQuiz(){
     ans03.innerText = currentQuestions.ans3;
     ans04.innerText = currentQuestions.ans4;
 }
+
+function getSelected() {
+    let answer = undefined;
+
+    answerEls.forEach((answerEl) => {
+        if (answerEl.checked) {
+            answer = answerEl.id;
+        }
+    });
+
+    return answer;
+}
+
+function deselectAnswers(){
+    answerEls.forEach((answerEl) =>{
+            answerEl.checked = false;
+        }
+    );
+}
+
+submitBtn.addEventListener("click", ()  => {
+    const answer = getSelected();
+
+    if (answer) {
+        if (answer === questions[currentQuiz].correct){
+            score++;
+        }
+
+        currentQuiz++;
+        if (currentQuiz < questions.length){
+            loadQuiz();
+        }else{
+            quiz.innerHTML = <h3>You correctly scored ${score}/{questions.length} questions.</h3>
+            <button onclick="location.reload()">Re-take Test</button>
+            ;
+        }
+    }
+});
