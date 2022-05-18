@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>JavaScript Test</title>
 </head>
 <body>
@@ -16,19 +17,33 @@
     </nav>
     <header>
         <div class="header">
-            <h3>JavaScript Test</h3>
+            <h3>Teremi JavaScript Club</h3>
         </div>
     </header>
-    <form action="" name="jsQuiz" id="quiz">
-        <div>
-            <p>What is JavaScript?</p>
-            <p><input type="radio" name="answer1" value="resp1">A. Object-Oriented</p>
-        </div>
-    </form>
-    <div class="result">
-        <h3>Your Score:</h3>
-        <p id="comment"></p>
-        <p id="result"></p>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h3>JavaScript Test</h3>
+            <ul>
+                <li>
+                    <input type="radio" id="ans1" name="answer" class="answer">
+                    <label for="ans1">Question</label>
+                </li>
+                <li>
+                   <input type="radio" id="ans2" name="answer" class="answer">
+                   <label for="ans2">Question</label>
+               </li>
+               <li>
+                   <input type="radio" id="ans3" name="answer" class="answer">
+                   <label for="ans3">Question</label>
+               </li>
+               <li>
+                   <input type="radio" id="ans4" name="answer" class="answer">
+                   <label for="ans4">Question</label>
+               </li>
+            </ul>
+       </div>
+       <button>Submit</button>
     </div>
+<script src="./assets/js/app.js"></script>    
 </body>
 </html>
