@@ -48,11 +48,11 @@ let score = 0;
 loadQuiz();
 
 function loadQuiz(){
-    deselectAnswer();
+    deselectAnswers();
 
-    const currentQuestions = questions[currentQuiz];
+    const currentQuizData = questions[currentQuiz];
 
-    questionEl.innerText = currentQuestions.question;
+    questionEl.innerText = currentQuizData.question;
     ans01.innerText = currentQuestions.ans1;
     ans02.innerText = currentQuestions.ans2;
     ans03.innerText = currentQuestions.ans3;
@@ -90,7 +90,7 @@ submitBtn.addEventListener("click", ()  => {
         if (currentQuiz < questions.length){
             loadQuiz();
         }else{
-            quiz.innerHTML = <h3>You correctly scored ${score}/{questions.length} questions.</h3>
+            quiz.innerHTML = <h3>You got ${score}/{questions.length} questions correctly.</h3>
             <button onclick="location.reload()">Re-take Test</button>
             ;
         }
