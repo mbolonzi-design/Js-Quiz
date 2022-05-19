@@ -41,7 +41,7 @@
  [Go Back to the top](#javascript-quiz-board)
 ### Live Link
 
-- Click this link to view the live application: https://mbolonzi-design.github.io/JavaScript_Quiz-Board/
+- Click this link to view the live application: https://mbolonzi-design.github.io/Js-Quiz/
 
 ### Technology  Used
 * HTML - which was used to develope the structure of the pages.

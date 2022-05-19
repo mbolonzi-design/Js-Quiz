@@ -34,7 +34,7 @@ const questions = [
 ];
 
 const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll(".anwer");
+const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
 const ans01 = document.getElementById("ans01");
 const ans02 = document.getElementById("ans02");
@@ -50,7 +50,7 @@ loadQuiz();
 function loadQuiz(){
     deselectAnswers();
 
-    const currentQuizData = questions[currentQuiz];
+    const currentQuiz = questions[currentQuiz];
 
     questionEl.innerText = currentQuizData.question;
     ans01.innerText = currentQuestions.ans1;
@@ -90,7 +90,7 @@ submitBtn.addEventListener("click", ()  => {
         if (currentQuiz < questions.length){
             loadQuiz();
         }else{
-            quiz.innerHTML = <h3>You got ${score}/{questions.length} questions correctly.</h3>
+            quiz.innerHTML = <p>You got ${score}/{questions.length} questions correctly.</p>
             <button onclick="location.reload()">Re-take Test</button>
             ;
         }
