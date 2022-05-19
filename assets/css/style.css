@@ -7,9 +7,26 @@
 }
 body{
     background-color: #f5f5f5;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+nav{
+    background-color: #5D7300;
+    height: 70px;
+}
+nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+}
+nav ul li{
+    color: white;
+}
+.header{
+    font-size: 40px;
+    margin-top:100px;
 }
 .quiz-container{
     background-color: #808080;
@@ -18,7 +35,9 @@ body{
     width: 800px;
     height: 300px;
     max-width: 100%;
-    margin-top: 200px;
+    margin-top: 0;
+    margin-left: 280px;
+    
 }
 .quiz-header{
     padding: 30px;
@@ -55,4 +74,8 @@ button:hover{
 button:focus{
     background-color: #4f5259;
     outline: none;
+}
+footer{
+    text-align: center;
+    margin-top: 20px;
 }
